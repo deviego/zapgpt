@@ -1,0 +1,4 @@
+node_modules
+ChromeSession
+.wwebjs_auth
+.env
