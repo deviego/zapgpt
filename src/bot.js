@@ -31,12 +31,12 @@ client.on("message", async (message) => {
     client.sendMessage(
       message.from,
       "Oi ser humano"
-    );  console.log(typeof(message.type))
+    ); 
   }else if(message.body === "Olá Alfredozord"){
     client.sendMessage(
       message.from, 
       "Olá Diego, como posso ajudar?"
-    );
+    ); 
   }else if(typeof(message.body) != "string" ){
     client.sendMessage(
       message.from, 
