@@ -5,7 +5,7 @@
     "watchPatterns":["src/**"]
   },
   "deploy": {
-    "startCommand": "nodemon src/bot.js",
+    "startCommand": "echo starting!",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10
   }
