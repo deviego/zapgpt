@@ -37,11 +37,7 @@ client.on("message", async (message) => {
       message.from, 
       "Olá Diego, como posso ajudar?"
     ); 
-  }else if(typeof(message.body) != "string" ){
-    client.sendMessage(
-      message.from, 
-      "Por favor digite, eu só respondo mensagens textuais."
-    )} else {
+  } else {
     try {
       // Use the rate-limited axios instance to make API calls
       const response = await limiter({
