@@ -1,9 +1,19 @@
 require("dotenv").config();
 
+
 const qrcode = require("qrcode-terminal");
 const { Client, LocalAuth } = require("whatsapp-web.js");
 const axios = require("axios");
 const rateLimit = require("axios-rate-limit");
+
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+
 
 const limiter = rateLimit(axios.create(), 10, 60000);
 
@@ -64,3 +74,5 @@ client.on("message", async (message) => {
 
 
 client.initialize();
+
+app.listen(3000)
