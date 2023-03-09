@@ -17,7 +17,7 @@ const client = new Client({
 
 
 
-  client.on("qr", (qr) => {
+client.on("qr", (qr) => {
       qrcode.generate(qr, { small: true });
 });
 
@@ -49,7 +49,7 @@ client.on("message", async (message) => {
         method: "post",
         url: "https://api.openai.com/v1/completions",
         data: {
-          model: "text-davinci-003",
+          model: "gpt-3.5-turbo",
           prompt: message.body,
           temperature: 0,
           max_tokens: 1000,
